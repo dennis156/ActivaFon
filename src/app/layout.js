@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BootstrapScript from '../components/BootstrapScript';
 import "./globals.css";
+import "./views/common/navbar"
+import Navbar from "./views/common/navbar";
+import "./page.module.css"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,10 +26,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
       <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+       <Navbar/>
         {children}
-        <BootstrapScript /> {/* Ensure Bootstrap JS is only included on the client */}
+        <BootstrapScript /> {}
       </body>
     </html>
   );
