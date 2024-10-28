@@ -247,9 +247,9 @@ width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
 }
 
 .btn-add {
-  background-color: #00156a; /* Verde típico de acciones de agregar */
+  background-color: #ffffff; /* Verde típico de acciones de agregar */
   border: none;
-  color: white;
+  color: #000;
   padding: 12px 24px;
   font-size: 16px;
   font-weight: bold;
@@ -268,12 +268,12 @@ width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
   z-index: 1000;
 }
 .btn-add:hover {
-  background-color: #00053d; /* Color más oscuro en hover */
+  background-color: #ffffff88; /* Color más oscuro en hover */
   transform: translateY(-3px);
 }
 .btn-add:active {
   transform: translateY(0);
-  background-color: #01002d; /* Aún más oscuro en clic */
+  background-color: #ffffff; /* Aún más oscuro en clic */
 }
 .btn-add i {
   font-size: 20px; /* Tamaño del ícono */
@@ -333,4 +333,148 @@ width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
   text-align: left;
   width: 80rem;
   min-height: 100vh;
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, 0.3); /* Blanco con transparencia */
+  color: #fff; /* Cambia el color del texto si lo deseas */
+}
+
+
+body {
+  background-color: #121212; /* Color de fondo oscuro */
+  color: #ffffff; /* Color del texto blanco */
+  font-family: 'Arial', sans-serif; /* Fuente moderna */
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content{
+  background-color: #161616;
+}
+
+.main-image {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que el contenido ocupe el espacio completo */
+}
+
+.search-container {
+  margin: 20px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.search-container input {
+  border-radius: 25px; /* Bordes redondeados para el input */
+  padding: 10px;
+  border: 1px solid #444; /* Borde más claro */
+  background-color: #1e1e1e; /* Fondo oscuro del input */
+  color: #ffffff; /* Texto blanco en el input */
+  transition: border-color 0.3s;
+}
+
+.search-container input:focus {
+  border-color: #bb86fc; /* Color de borde al enfocar */
+  outline: none;
+}
+
+.gallery-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.gallery-title {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.gallery-item {
+  width: 150px;
+  height: 150px;
+  background-color: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+.testimonials-container {
+  animation: fadeIn 1s ease-in-out;
+  margin-top: 30px;
+}
+
+.testimonials-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  animation: slideIn 0.5s forwards;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.form-control::placeholder {
+  color: #888; /* Color del placeholder por defecto */
+  opacity: 1; /* Asegura que sea completamente opaco */
+}
+
+.form-control:focus::placeholder {
+  color: #000; /* Color del placeholder cuando el input está enfocado */
+}
+
+.form-control:active::placeholder {
+  color: #000; /* Color del placeholder cuando el input está activo */
 }
